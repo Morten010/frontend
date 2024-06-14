@@ -1,23 +1,27 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 import { categories } from "../../constants/index"
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
   <div class="top">
     <nav>
       <!-- logo -->
-      <span class="logo hind">
+      <RouterLink to="/" class="logo hind">
         <span class="big"> Improving </span>
         <span class="small"> Store </span>
-      </span>
+      </RouterLink>
       <!-- logo -->
 
+      <!-- search -->
       <div class="input-wrapper">
         <input class="hind" placeholder="Indtatst søgeord" />
         <Icon width="26" icon="ion:search-outline" />
       </div>
+      <!-- search -->
 
+      <!-- cart -->
       <div class="shopping hind">
         <span> 0,00 DKK </span>
         <button class="cart">
@@ -25,6 +29,7 @@ import { categories } from "../../constants/index"
           <div class="amount">3</div>
         </button>
       </div>
+      <!-- cart -->
     </nav>
   </div>
   <div class="bottom">
@@ -53,7 +58,7 @@ import { categories } from "../../constants/index"
       align-items: center;
       // gap: 1rem;
       font-size: 2.9rem;
-
+      text-decoration: none;
       .big {
         letter-spacing: 7px;
         font-weight: 600;
@@ -142,6 +147,7 @@ import { categories } from "../../constants/index"
         margin: 0 auto;
         display: flex;
         gap: 2.8rem;
+        font-weight: 500;
         li{
             list-style: none;
             padding: 2.5rem 0;

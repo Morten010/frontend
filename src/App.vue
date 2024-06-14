@@ -7,8 +7,6 @@ import { Icon } from '@iconify/vue';
 
 <template>
   <Navbar />
-  <Icon 
-            icon="ion:search-outline" />
   <RouterView />
 </template>
 
