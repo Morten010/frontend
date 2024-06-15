@@ -64,14 +64,18 @@
                     font-size: 6rem;
                     line-height: 4.5rem;
                 }
-                @include tablet{
+                @include mobile{
                     font-size: 5rem;
                 }
             }
             p{
                 font-size: 4rem;
                 font-weight: bolder;
-                margin-bottom: 1.6rem
+                margin-bottom: 1.6rem;
+                @include tablet{
+                    margin-top: 1rem;
+                    margin-bottom: 2rem;
+                }
             }
             a{
                 display: inline-block;
@@ -82,6 +86,10 @@
                 border-radius: 100px;
                 text-decoration: none;
                 font-weight: bold;
+                @include tablet{
+                    font-size: 1.4rem;
+                    padding: 1rem 3rem;
+                }
             }
         }
     }

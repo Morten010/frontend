@@ -28,7 +28,7 @@ export const useCartStore = defineStore('cart', {
         totalPrice: (state) => {
             let price = 0
             for(const item of state.items){
-                price += item.price ?? 0
+                price += item.price * item.amount ?? 0
             }
             return price
         }

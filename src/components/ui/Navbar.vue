@@ -43,7 +43,7 @@ const handleSmallMenu = () => {
     appElement.setAttribute("style", "");
     bodyElement.setAttribute("style", "");
   }
-  
+
   openMenuSmallScreen.value = !openMenuSmallScreen.value
 }
 
@@ -74,7 +74,7 @@ const handleSmallCart = () => {
 
       <!-- search -->
       <div class="input-wrapper">
-        <input class="hind" placeholder="Indtatst søgeord" v-model="search" />
+        <input class="hind" placeholder="Indtast søgeord" v-model="search" />
         <Icon width="26" icon="ion:search-outline" />
       </div>
       <!-- search -->
@@ -123,7 +123,7 @@ const handleSmallCart = () => {
   class="input-small-screen"
   >
     <div class="input-wrapper">
-      <input class="hind" placeholder="Indtatst søgeord" v-model="search" />
+      <input class="hind" placeholder="Indtast søgeord" v-model="search" />
       <Icon width="26" icon="ion:search-outline" />
     </div>
   </div>

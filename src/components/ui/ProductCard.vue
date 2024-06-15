@@ -93,6 +93,11 @@
                     background-color: #4a90e2;
                     color: white;
                 }
+                @include laptop{
+                    font-size: 1rem;
+                    padding: 1rem 3rem; 
+                    font-weight: 700;
+                }
             }
         }
     }
