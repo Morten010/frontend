@@ -33,12 +33,12 @@ const handleSmallMenu = () => {
     openSearchSmallScreen.value = false
   }
   if(!openMenuSmallScreen.value && document.getElementById("app") && document.querySelector("body")){
-    document.getElementById("app").style = "transform: translateX(75%); z-index: 40; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; position: relative;"
-    document.querySelector("body").style = "overflow: hidden; max-height: 100%; max-width: 100vw;"
+    document.getElementById("app").setAttribute("style", "transform: translateX(75%); z-index: 40; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; position: relative;")
+    document.querySelector("body").setAttribute("style",  "overflow: hidden; max-height: 100%; max-width: 100vw;")
   }
   if(openMenuSmallScreen.value && document.getElementById("app") && document.querySelector("body")){
-    document.getElementById("app").style = ""
-    document.querySelector("body").style = ""
+    document.getElementById("app").setAttribute("style", "")
+    document.querySelector("body").setAttribute("style", "")
   }
   openMenuSmallScreen.value = !openMenuSmallScreen.value
 }
