@@ -32,7 +32,6 @@
             :src="image.url"
             :alt="image.alt"
             class="bg-image"
-            rel="preload"
         />
     </section>
 </template>
