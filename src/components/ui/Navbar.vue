@@ -32,6 +32,14 @@ const handleSmallMenu = () => {
   if(openSearchSmallScreen){
     openSearchSmallScreen.value = false
   }
+  if(!openMenuSmallScreen.value){
+    document.getElementById("app").style = "transform: translateX(75%); z-index: 40; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; position: relative;"
+    document.querySelector("body").style = "overflow: hidden; max-height: 100%; max-width: 100vw;"
+  }
+  if(openMenuSmallScreen.value){
+    document.getElementById("app").style = ""
+    document.querySelector("body").style = ""
+  }
   openMenuSmallScreen.value = !openMenuSmallScreen.value
 }
 
@@ -42,7 +50,9 @@ const handleSmallCart = () => {
   if(openSearchSmallScreen){
     openSearchSmallScreen.value = false
   }
+
   openCartSmallScreen.value = !openCartSmallScreen.value
+  
 }
 
 </script>
@@ -81,7 +91,9 @@ const handleSmallCart = () => {
       <CategoryDropdown v-for="category in categories" :category="category" />
     </ul>
     <ul class="phone-nav">
-      <li>
+      <li
+      @click="handleSmallMenu"
+      >
         <Icon width="33" icon="iconoir:menu" />
       </li>
       <li
@@ -113,11 +125,89 @@ const handleSmallCart = () => {
   </div>
   <!-- small screens popups -->
 
+  <!-- sidebar -->
+   <Teleport v-if="openMenuSmallScreen" to="body">
+    <div
+    class="sidebar"
+    >
+      <div
+      class="sidebar-content"
+      >
+        <div
+        class="sidebar-top"
+        >
+          <h2>
+            Menu
+          </h2>
+          <Icon 
+          width="30" 
+          icon="ion:close-circle-outline" 
+          @click="handleSmallMenu"
+          />
+        </div>
+        <ul>
+          <li v-for="link in categories">
+              <RouterLink :to="link.href">
+                  {{ link.title }}
+                  <Icon width="16" icon="fluent:chevron-right-20-regular" />
+              </RouterLink>
+          </li>
+        </ul>
+      </div>
+    </div>
+   </Teleport>
+  <!-- sidebar -->
+
 </template>
 
 <style lang="scss" scoped>
 @import "../../assets/shared.scss";
-
+  .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 75vw;
+    height: 100%;
+    background-color: transparent;
+    z-index: 30;
+    .sidebar-content{
+      .sidebar-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.8rem;
+        svg{
+          color: #c1b7b7;
+        }
+      }
+      padding: 2rem;
+      width: 100%;
+      background-color: white;
+      height: 100%;
+      ul{
+        padding-top: 2rem;
+        li{
+          list-style-type: none;
+          a{
+            color: black;
+            text-decoration: none;
+            font-size: 2rem;
+            justify-content: space-between;
+            display: flex;
+            padding: 0.5rem 0;
+            transition: color 0.2s;
+            &:hover{
+              color: #4a90e2;
+            }
+            svg{
+              color: #c1b7b7;
+            }
+          }
+        }
+      }
+    }
+  }
 .top {
   padding: 0 20px;
 

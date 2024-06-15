@@ -72,12 +72,16 @@ const store = useCartStore();
 </template>
 
 <style lang="scss">
-
+@import "../../../assets/shared.scss";
 .modal {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding: 2rem;
         background-color: white;
         min-width: 400px;
+        @include laptop {
+            min-width: auto;
+            width: 100%;
+        }
         a{
             font-size: 1.6rem;
             color: black;
