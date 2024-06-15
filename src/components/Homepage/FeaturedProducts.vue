@@ -27,10 +27,15 @@ const handleScrollRight = () => {
             <div class="top">
                 <h2>Our Featured Products</h2>
                 <div class="button-container">
-                    <button @click="handleScrollLeft">
+                    <button @click="handleScrollLeft"
+                    aria-label="carousel left"
+                    >
                         <Icon width="23" icon="fluent:chevron-left-20-regular" />
                     </button>
-                    <button @click="handleScrollRight">
+                    <button 
+                    @click="handleScrollRight"
+                    aria-label="carousel right"
+                    >
                         <Icon width="23" icon="fluent:chevron-right-20-regular" />
                     </button>
                 </div>

@@ -11,7 +11,7 @@ export const useCartStore = defineStore('cart', {
                 price: 59900,
                 amount: 1,
                 image: {
-                    src: "/products/shirt1.jpg",
+                    src: "/products/shirt1.webp",
                     alt: "shirt 1"
                 }
             },

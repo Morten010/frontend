@@ -8,7 +8,7 @@ export const products: ProductProps[] = [
         title: "Bruun & Stengade Nicky - Skjorter",
         price: 59900,
         image: {
-            src: "/products/shirt1.jpg",
+            src: "/products/shirt1.webp",
             alt: "shirt 1"
         }
     },
@@ -17,7 +17,7 @@ export const products: ProductProps[] = [
         title: "Bruun & Stengade Nicky - Skjorter",
         price: 59900,
         image: {
-            src: "/products/shirt1.jpg",
+            src: "/products/shirt1.webp",
             alt: "shirt 1"
         }
     },
@@ -26,7 +26,7 @@ export const products: ProductProps[] = [
         title: "Bruun & Stengade Nicky - Skjorter",
         price: 59900,
         image: {
-            src: "/products/shirt1.jpg",
+            src: "/products/shirt1.webp",
             alt: "shirt 1"
         }
     },
@@ -35,7 +35,7 @@ export const products: ProductProps[] = [
         title: "Bruun & Stengade Nicky - Skjorter",
         price: 59900,
         image: {
-            src: "/products/shirt1.jpg",
+            src: "/products/shirt1.webp",
             alt: "shirt 1"
         }
     },
@@ -44,7 +44,7 @@ export const products: ProductProps[] = [
         title: "Bruun & Stengade Nicky - Skjorter",
         price: 59900,
         image: {
-            src: "/products/shirt1.jpg",
+            src: "/products/shirt1.webp",
             alt: "shirt 1"
         }
     },
@@ -53,7 +53,7 @@ export const products: ProductProps[] = [
         title: "Bruun & Stengade Nicky - Skjorter",
         price: 59900,
         image: {
-            src: "/products/shirt1.jpg",
+            src: "/products/shirt1.webp",
             alt: "shirt 1"
         }
     },
@@ -62,7 +62,7 @@ export const products: ProductProps[] = [
         title: "Bruun & Stengade Nicky - Skjorter",
         price: 59900,
         image: {
-            src: "/products/shirt1.jpg",
+            src: "/products/shirt1.webp",
             alt: "shirt 1"
         }
     },
@@ -71,7 +71,7 @@ export const products: ProductProps[] = [
         title: "Bruun & Stengade Nicky - Skjorter",
         price: 59900,
         image: {
-            src: "/products/shirt1.jpg",
+            src: "/products/shirt1.webp",
             alt: "shirt 1"
         }
     },
@@ -212,7 +212,7 @@ export const categories: CategoryProps[] = [
 
 export const heroConst = {
     image: {
-      url: "/hero.png",
+      url: "/hero.webp",
       alt: "mand og kvinde i improving merch"
     },
     title: "FASHION COLLECTION",

@@ -4,7 +4,10 @@ import { useCartStore } from "../../../stores/cart";
 const store = useCartStore();
 </script>
 <template>
-    <button class="cart">
+    <button 
+    class="cart"
+    aria-label="Cart"
+    >
         <Icon width="26" icon="iconoir:shopping-bag" />
         <div v-if="store.numberOfItems" class="amount">
             {{ store.numberOfItems }}
