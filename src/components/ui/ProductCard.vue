@@ -1,6 +1,10 @@
 <script setup lang="ts">
     import { formatPrice } from "../../utils/index"
+     import { useCartStore } from "../../stores/cart.ts"
+    const store = useCartStore()
+
     defineProps<{
+        id: number
         title: string;
         price: number;
         image: {
@@ -8,6 +12,7 @@
             alt: string;
         };
     }>()
+
 </script>
 
 <template>
@@ -27,7 +32,14 @@
             <p>
                 {{ formatPrice(price) }}
             </p>
-            <button>
+            <button
+                @click="store.addProduct({
+                    id,
+                    title,
+                    price,
+                    image
+                })"
+            >
                 Buy now
             </button>
         </div>
@@ -63,6 +75,7 @@
             }
             button{
                 border: .1rem solid #4a90e2;
+                cursor: pointer;
                 background: transparent;
                 padding: 1rem 3rem; 
                 font-size: 1.4rem;
@@ -70,6 +83,11 @@
                 font-weight: 600;
                 border-radius: 100px;
                 text-transform: uppercase;
+                transition: all 0.2s;
+                &:hover{
+                    background-color: #4a90e2;
+                    color: white;
+                }
             }
         }
     }

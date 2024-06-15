@@ -1,7 +1,12 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
-import { categories } from "../../constants/index"
-import { RouterLink } from 'vue-router'
+  import { Icon } from "@iconify/vue";
+  import Cart from "./Cart.vue";
+  import { categories } from "../../constants/index"
+  import { RouterLink } from 'vue-router'
+  import { useCartStore } from "../../stores/cart.ts"
+  import { formatPrice } from "../../utils/index"
+  const store = useCartStore()
+  
 </script>
 
 <template>
@@ -22,13 +27,7 @@ import { RouterLink } from 'vue-router'
       <!-- search -->
 
       <!-- cart -->
-      <div class="shopping hind">
-        <span> 0,00 DKK </span>
-        <button class="cart">
-          <Icon width="26" icon="iconoir:shopping-bag" />
-          <div class="amount">3</div>
-        </button>
-      </div>
+      <Cart />
       <!-- cart -->
     </nav>
   </div>
@@ -94,46 +93,6 @@ import { RouterLink } from 'vue-router'
         right: 1.5rem;
         top: 50%;
         transform: translateY(-50%);
-      }
-    }
-
-    .shopping {
-      display: flex;
-      align-items: center;
-
-      span {
-        color: #797979;
-        font-size: 1.6rem;
-        margin-right: 1rem;
-      }
-
-      button {
-        position: relative;
-        background-color: transparent;
-        border: none;
-        transition: color 0.3s;
-
-        .amount {
-          position: absolute;
-          font-size: 1rem;
-          top: 0;
-          right: 0;
-          width: 1.7rem;
-          border-radius: 100px;
-          transform: translateX(50%) translateY(-50%);
-          background-color: black;
-          color: #fff;
-          aspect-ratio: 1/1;
-          padding: 0.2rem;
-          display: grid;
-          place-content: center;
-        }
-
-        cursor: pointer;
-
-        &:hover {
-          color: #4a90e2;
-        }
       }
     }
   }
