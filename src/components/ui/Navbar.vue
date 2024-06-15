@@ -32,14 +32,18 @@ const handleSmallMenu = () => {
   if(openSearchSmallScreen){
     openSearchSmallScreen.value = false
   }
-  if(!openMenuSmallScreen.value && document.getElementById("app") && document.querySelector("body")){
-    document.getElementById("app").setAttribute("style", "transform: translateX(75%); z-index: 40; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; position: relative;")
-    document.querySelector("body").setAttribute("style",  "overflow: hidden; max-height: 100%; max-width: 100vw;")
+  const appElement = document.getElementById("app");
+  const bodyElement = document.querySelector("body");
+
+  if (!openMenuSmallScreen.value && appElement && bodyElement) {
+    appElement.setAttribute("style", "transform: translateX(75%); z-index: 40; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; position: relative;");
+    bodyElement.setAttribute("style", "overflow: hidden; max-height: 100%; max-width: 100vw;");
   }
-  if(openMenuSmallScreen.value && document.getElementById("app") && document.querySelector("body")){
-    document.getElementById("app").setAttribute("style", "")
-    document.querySelector("body").setAttribute("style", "")
+  if (openMenuSmallScreen.value && appElement && bodyElement) {
+    appElement.setAttribute("style", "");
+    bodyElement.setAttribute("style", "");
   }
+  
   openMenuSmallScreen.value = !openMenuSmallScreen.value
 }
 
