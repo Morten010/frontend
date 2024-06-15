@@ -37,6 +37,7 @@
 </template>
 
 <style scoped lang="scss"">
+    @import "../../assets/shared.scss";
     section{
         position: relative;
         width: 100%;
@@ -58,7 +59,14 @@
                 font-size: 8.5rem;
                 max-width: 60rem;
                 margin: 0 auto;
-                line-height: 80px;
+                line-height: 8rem;
+                @include tablet{
+                    font-size: 6rem;
+                    line-height: 4.5rem;
+                }
+                @include tablet{
+                    font-size: 5rem;
+                }
             }
             p{
                 font-size: 4rem;

@@ -1,6 +1,6 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-import type { ProductProps } from '@/types/indext'
+import type { ProductProps } from '@/types/index'
 
 export const useCartStore = defineStore('cart', {
     state: () => ({

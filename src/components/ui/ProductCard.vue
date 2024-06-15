@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import { formatPrice } from "../../utils/index"
-     import { useCartStore } from "../../stores/cart.ts"
+     import { useCartStore } from "../../stores/cart"
     const store = useCartStore()
 
     defineProps<{
@@ -47,16 +47,21 @@
 </template>
 
 <style scoped lang="scss">
+    @import "../../assets/shared.scss";
     .product-card{
         border: 0.15rem solid #e3e3e3;
         background-color: #fbfbfb;
         width: calc(25% - 8px);
         min-width: calc(25% - 8px);
         cursor: pointer;
+        @include laptop{
+            width: calc(50% - 8px);
+            min-width: calc(50% - 8px);
+        }
         img{
             width: 100%;
             aspect-ratio: 31/40;
-            object-fit: contain;
+            object-fit: cover;
             border-bottom: 0.15rem solid #e3e3e3;
         }
         .card-body{

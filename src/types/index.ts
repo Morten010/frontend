@@ -8,3 +8,12 @@ export interface ProductProps {
         alt: string;
     };
 }
+
+export interface CategoryProps {
+    title: string;
+    href: string;
+    underLinks: {
+        title: string;
+        href: string;
+    }[];
+}

@@ -60,6 +60,7 @@ import { Icon } from "@iconify/vue";
 </template>
 
 <style scoped lang="scss">
+    @import "../../assets/shared.scss";
     .footer-container{
         background-color: #303030;
         color: white;
@@ -71,11 +72,15 @@ import { Icon } from "@iconify/vue";
         }
         footer{
             max-width: 1280px;
+            
             margin: 0 auto;
             padding: 10rem 0;
             display: grid;
-            grid-template-columns: minmax(200px, 2fr) minmax(150px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
-            gap: 2rem;
+            grid-template-columns: minmax(200px, 2fr) repeat(auto-fit, minmax(250px, 1fr));
+            @include laptop{
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            gap: 4rem;
             .info{
                 p{
                     font-size: 1.4rem;

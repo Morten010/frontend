@@ -1,4 +1,5 @@
-import type { ProductProps } from "@/types/indext"
+import type { CategoryProps } from "@/types"
+import type { ProductProps } from "@/types/index"
 
 
 export const products: ProductProps[] = [
@@ -76,13 +77,138 @@ export const products: ProductProps[] = [
     },
 ]
 
-export const categories = [
-    "Woman",
-    "Men",
-    "Junior",
-    "Accessories",
-    "Collections",
-]
+export const categories: CategoryProps[] = [
+    {
+      title: "Woman",
+      href: "#",
+      underLinks: [
+        {
+          title: "SUNGLASSES",
+          href: "#"
+        },
+        {
+          title: "SHIRTS & TOPS",
+          href: "#"
+        },
+        {
+          title: "DESIGNER TOPS",
+          href: "#"
+        },
+        {
+          title: "BLOUSES",
+          href: "#"
+        },
+        {
+          title: "SOCKS & TIGHTS",
+          href: "#"
+        }
+      ]
+    },
+    {
+      title: "Men",
+      href: "#",
+      underLinks: [
+        {
+          title: "New Arrivals",
+          href: "#"
+        },
+        {
+          title: "Shirts",
+          href: "#"
+        },
+        {
+          title: "Pants",
+          href: "#"
+        },
+        {
+          title: "Jackets",
+          href: "#"
+        },
+        {
+          title: "Sale",
+          href: "#"
+        }
+      ]
+    },
+    {
+      title: "Junior",
+      href: "#",
+      underLinks: [
+        {
+          title: "New Arrivals",
+          href: "#"
+        },
+        {
+          title: "Tops",
+          href: "#"
+        },
+        {
+          title: "Bottoms",
+          href: "#"
+        },
+        {
+          title: "Dresses",
+          href: "#"
+        },
+        {
+          title: "Sale",
+          href: "#"
+        }
+      ]
+    },
+    {
+      title: "Accessories",
+      href: "#",
+      underLinks: [
+        {
+          title: "New Arrivals",
+          href: "#"
+        },
+        {
+          title: "Bags",
+          href: "#"
+        },
+        {
+          title: "Jewelry",
+          href: "#"
+        },
+        {
+          title: "Hats",
+          href: "#"
+        },
+        {
+          title: "Sale",
+          href: "#"
+        }
+      ]
+    },
+    {
+      title: "Collections",
+      href: "#",
+      underLinks: [
+        {
+          title: "Summer",
+          href: "#"
+        },
+        {
+          title: "Winter",
+          href: "#"
+        },
+        {
+          title: "Spring",
+          href: "#"
+        },
+        {
+          title: "Fall",
+          href: "#"
+        },
+        {
+          title: "Special Edition",
+          href: "#"
+        }
+      ]
+    }
+]  
 
 export const heroConst = {
     image: {
